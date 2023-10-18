@@ -485,8 +485,13 @@ MonoBehaviour:
   _scoreText: {fileID: 690029986}
   _tiles:
   - {fileID: 6544902421640035764, guid: 112399783f61ca64d9efc421ab91769c, type: 3}
+  - {fileID: 2657692372411125467, guid: 3735f3d7ef24c3e4b93c5737b4db6eaf, type: 3}
+  - {fileID: 468868090739617425, guid: 1207176b32daee34abb572f6cbcb9ede, type: 3}
+  - {fileID: 2612704284711656737, guid: b62b7162059bd4c43ac38b93993e295c, type: 3}
   - {fileID: 651545899578200312, guid: 34ac37c2b731da246b2cab4e2315690b, type: 3}
+  - {fileID: 5609394991415381184, guid: 702bc04da53d4a44e9961cdbf27f9068, type: 3}
   - {fileID: 4008727138080290994, guid: 1f15a03e107c1df4b9af3463366ca881, type: 3}
+  - {fileID: 8065008747719731566, guid: f60f2fcd835a7e64d90d11e1f2b46397, type: 3}
   _grid: {fileID: 1263166851}
 --- !u!4 &992321518
 Transform:

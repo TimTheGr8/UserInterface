@@ -16,21 +16,36 @@ public class TileGame : MonoBehaviour
     private TileItem _tile2;
     private int _tileCount = 0;
     private int _totalScore = 0;
+    private List<GameObject> _tilesSpawned = new List<GameObject>();
 
 
     private void Start()
     {
         _totalScore = 0;
         _scoreText.text = _totalScore.ToString();
+        CreateTiles();
+    }
 
+    private void CreateTiles()
+    {
+        int randTile = 0;
         for (int i = 0; i < 12; i++)
         {
-            GameObject tile = Instantiate(_tiles[Random.Range(0, 3)], transform.position, Quaternion.identity);
-            tile.transform.SetParent(_grid.transform);
+            if (i % 2 == 0)
+            {
+                randTile = Random.Range(0, _tiles.Count);
+            }
+            _tilesSpawned.Add(_tiles[randTile]);
+        }
+        Shuffle(_tilesSpawned);
+        foreach (var item in _tilesSpawned)
+        {
+            GameObject newTile = Instantiate(item, transform.position, Quaternion.identity);
+            newTile.transform.SetParent(_grid.transform);
         }
     }
 
-    public void Shuffle<T>(IList<T> tile)
+    public void Shuffle(List<GameObject> tile)
     {
         var count = tile.Count;
         var last = count - 1;
@@ -84,11 +99,6 @@ public class TileGame : MonoBehaviour
     public void ModifyScore(int score)
     {
         _totalScore += score;
-        UpdateScoreText();
-    }
-
-    private void UpdateScoreText()
-    {
         _scoreText.text = _totalScore.ToString();
     }
 

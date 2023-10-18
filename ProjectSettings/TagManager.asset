@@ -7,6 +7,11 @@ TagManager:
   - Spell
   - Lightning
   - Bomb
+  - Coin
+  - Gem
+  - Heart
+  - Lock
+  - Star
   layers:
   - Default
   - TransparentFX

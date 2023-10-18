@@ -23,7 +23,6 @@ public class TileItem : MonoBehaviour
     {
         _manager.AddTile(this);
         _coverImage.gameObject.SetActive(false);
-        //_manager.ModifyScore(_scoreAmount);
     }
 
     public int GetScore()
